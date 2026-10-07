@@ -1,0 +1,10 @@
+config.py
+dist/
+build/
+*.exe
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+.env
