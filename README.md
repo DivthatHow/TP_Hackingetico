@@ -1,4 +1,4 @@
-# Keylogger Educativo - Proyecto de Hacking Ético
+# Keylogger - Proyecto de Hacking Ético
 
 Trabajo parcial del curso **1CCB0001 - Hacking Ético**  
 Semestre 2026-10 | Docente: Gianpaul Custodio
