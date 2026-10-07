@@ -1,0 +1,4 @@
+
+TG_TOKEN            = "8921070753:AAGHfDh7aa187I9aQSWMaCIY_diQ4nojGAc"
+TG_CHAT_ID          = "6880099205"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1557196045119787058/WRDlecwrDZpJsbVveDnwx6OCictcYL5QA3o5n32Ul-Ib2AVN1y3cCUxxSChrvSmdnZt7"
