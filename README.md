@@ -1,17 +1,11 @@
 # Keylogger - Proyecto de Hacking Ético
 
 Trabajo parcial del curso de Hacking Ético
-Semestre 2026-10 | Docente: Gianpaul Custodio
+Semestre 2026-10
 
 Los autores no se responsabilizan del mal uso del material.
 
-Keylogger desarrollado en Python como demostración de:
-- Captura de pulsaciones de teclado a bajo nivel
-- Almacenamiento de logs con timestamp y ventana activa
-- Exfiltración de información vía HTTPS a Telegram y Discord
-- Empaquetado como binario ejecutable con Nuitka
-- Análisis de detección por Windows Defender
-
+Keylogger desarrollado en Python 
 
 - **Python 3.13**
 - **pynput**: captura de eventos de teclado
