@@ -12,7 +12,6 @@ import unicodedata
 from ctypes import wintypes
 
 # Importar configuración desde config.py
-# Nuitka empaqueta este módulo dentro del .exe automáticamente.
 try:
     import config
 except ImportError:
